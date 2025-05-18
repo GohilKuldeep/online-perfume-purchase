@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "u_id": 1,
+      "u_name": "Admin",
+      "email": "admin@perfume.com",
+      "password": "admin123",
+      "rold_id": 1
+    },
+    {
+      "u_id": 2,
+      "u_name": "Buyer One",
+      "email": "buyer1@example.com",
+      "password": "buyer123",
+      "rold_id": 2
+    },
+    {
+      "u_id": 3,
+      "u_name": "Buyer Two",
+      "email": "buyer2@example.com",
+      "password": "buyer456",
+      "rold_id": 2
+    },
+    {
+      "u_id": 4,
+      "u_name": "Seller One",
+      "email": "seller1@example.com",
+      "password": "seller123",
+      "rold_id": 3
+    },
+    {
+      "u_id": 5,
+      "u_name": "Seller Two",
+      "email": "seller2@example.com",
+      "password": "seller456",
+      "rold_id": 3
+    }
+  ],
+  "cities": [
+    { "c_id": 1, "c_name": "Mumbai" },
+    { "c_id": 2, "c_name": "Delhi" }
+  ],
+  "states": [
+    { "s_id": 1, "s_name": "Maharashtra" },
+    { "s_id": 2, "s_name": "Delhi" }
+  ],
+  "roles": [
+    { "rold_id": 1, "role_name": "Admin" },
+    { "rold_id": 2, "role_name": "Buyer" },
+    { "rold_id": 3, "role_name": "Seller" }
+  ],
+  "brands": [
+    { "b_id": 1, "b_name": "Dior" },
+    { "b_id": 2, "b_name": "Gucci" }
+  ],
+  "products": [
+    {
+      "p_id": 1,
+      "p_name": "Dior Sauvage",
+      "p_price": 4500,
+      "b_id": 1
+    },
+    {
+      "p_id": 2,
+      "p_name": "Gucci Bloom",
+      "p_price": 3800,
+      "b_id": 2
+    }
+  ],
+  "cart": [
+    {
+      "cart_id": 1,
+      "u_id": 2,
+      "p_id": 1,
+      "Quanty": 1
+    }
+  ],
+  "orders": [
+    {
+      "o_id": 1,
+      "u_id": 2,
+      "p_id": 1,
+      "Quanty": 1,
+      "Status": "Processing",
+      "pay_id": 1001
+    }
+  ],
+  "payments": [
+    {
+      "pay_id": 1001,
+      "method": "Online",
+      "amount": 4500
+    }
+  ]
+}

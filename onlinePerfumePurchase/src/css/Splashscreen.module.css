@@ -1,0 +1,67 @@
+.backgroundContainer {
+  background: linear-gradient(135deg, #f8e1d4, #f3c6c1);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glassContainer {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.logoContainer {
+  flex: 1;
+  opacity: 1;
+  pointer-events: auto;
+  transition: transform 0.5s ease;
+}
+.logoImage{
+  width: 120px;
+}
+.logoText {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.logoSubText {
+  color: #fff;
+  font-style: italic;
+  font-size: 14px;
+}
+.loginContainer {
+  transform: translateX(0%);
+  opacity: opacity;
+  transition: transform 0.5s ease;
+}
+
+.signupContainer {
+  transform: translateX(-100%);
+  opacity: opacity;
+  transition: transform 0.5s ease;
+}
+
+.TopSubText {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.bottomSubText {
+  color: #f3c6c1;
+  cursor: pointer;
+}
