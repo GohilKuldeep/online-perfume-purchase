@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Css/DashboardBuyer.css";
 import AllProduct from "./BuyerCompoent/AllProduct";
+import MyCart from "./BuyerCompoent/MyCart";
+import MyOrders from "./BuyerCompoent/MyOrders";
+import MyProfile from "./BuyerCompoent/MyProfile";
 
 const DashboardBuyer = () => {
   const [activeTab, setActiveTab] = useState("viewProduct");
@@ -10,21 +13,15 @@ const DashboardBuyer = () => {
       case "viewProduct":
         return <AllProduct />;
       case "manageProfile":
-        return (
-          <div>
-            Manage Buyer Profile (Insert/Update/Delete) (to be implemented)
-          </div>
-        );
+        return <MyProfile />;
       case "searchProduct":
         return <div>Search Product (to be implemented)</div>;
       case "buyProduct":
         return <div>Buy Product (to be implemented)</div>;
       case "manageCart":
-        return <div>Manage Cart (Insert/Delete) (to be implemented)</div>;
-      case "payment":
-        return <div>Payment (Online/Offline) (to be implemented)</div>;
+        return <MyCart />;
       case "deliveryStatus":
-        return <div>View Delivery Status (to be implemented)</div>;
+        return <MyOrders />;
       default:
         return null;
     }
@@ -58,12 +55,6 @@ const DashboardBuyer = () => {
             onClick={() => setActiveTab("manageCart")}
           >
             <span className="sidebar-label">My Cart</span>
-          </li>
-          <li
-            className={activeTab === "payment" ? "active" : ""}
-            onClick={() => setActiveTab("payment")}
-          >
-            <span className="sidebar-label">Checkout</span>
           </li>
           <li
             className={activeTab === "deliveryStatus" ? "active" : ""}
