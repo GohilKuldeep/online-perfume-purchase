@@ -8,6 +8,11 @@ import {
   FaClipboardList,
   FaSignOutAlt,
 } from "react-icons/fa";
+import ViewAllProducts from "./ViewAllProducts";
+import AddProduct from "./AddProduct";
+import ManageProduct from "./ManageProduct";
+import ManageOrders from "./ManageOrders";
+import ManageProfile from "./ManageProfile";
 
 const DashboardSeller = () => {
   const [activeTab, setActiveTab] = useState("viewProduct");
@@ -15,19 +20,15 @@ const DashboardSeller = () => {
   const renderContent = () => {
     switch (activeTab) {
       case "addProduct":
-        return <div>Add Product Form (to be implemented)</div>;
+        return <AddProduct />;
       case "viewProduct":
-        return <div>View All Product Information (to be implemented)</div>;
+        return <ViewAllProducts />;
       case "manageProfile":
-        return (
-          <div>
-            Manage Seller Profile (Insert/Update/Delete) (to be implemented)
-          </div>
-        );
+        return <ManageProfile />;
       case "manageProduct":
-        return <div>Manage Product (to be implemented)</div>;
+        return <ManageProduct />;
       case "manageOrder":
-        return <div>Manage Order Information (to be implemented)</div>;
+        return <ManageOrders />;
       default:
         return null;
     }

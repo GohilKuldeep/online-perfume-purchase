@@ -11,8 +11,8 @@ function App() {
       {/* <Routes>
         <Route path='/' element={<SplashScreen />} />
       </Routes> */}
-      <DashboardBuyer />
-      {/* <DashboardSeller /> */}
+      {/* <DashboardBuyer /> */}
+      <DashboardSeller />
       {/* <DashboardAdmin /> */}
     </>
   )
