@@ -31,7 +31,7 @@ const MyProfile = () => {
 
   return (
     <div className="profile-outer-container">
-      <div className="profile-card">
+      <div className="myProfile-card">
         <div className="profile-avatar-section">
           <img
             src={"/src/assets/fav.png"}
