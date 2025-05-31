@@ -79,11 +79,11 @@ const DashboardSeller = () => {
             <FaUserCog className="icon" />{" "}
             <span className="sidebar-label">Manage Profile</span>
           </li>
-        </ul>
-        <button className="logout-btn expanded" onClick={handleLogout}>
+          <button className="logout-btn expanded" onClick={handleLogout}>
           <FaSignOutAlt className="icon logout-icon" />{" "}
           <span className="sidebar-label">Logout</span>
         </button>
+        </ul>
       </aside>
       <main className="main-content">{renderContent()}</main>
     </div>

@@ -8,26 +8,24 @@ import {
   FaStore,
   FaSignOutAlt,
 } from "react-icons/fa";
+import ViewAllProducts from "./ViewAllProducts";
+import ManageCustomerProfile from "./ManageCustomerProfile";
+import ManageSellerProfile from "./ManageSellerProfile";
+import ManageAdminProfile from "./ManageAdminProfile";
 
 const DashboardAdmin = () => {
   const [activeTab, setActiveTab] = useState("viewProduct");
 
   const renderContent = () => {
     switch (activeTab) {
-      case "manageProduct":
-        return <div>Manage Product (Add/Remove) (to be implemented)</div>;
       case "viewProduct":
-        return <div>View All Product Information (to be implemented)</div>;
+        return <ViewAllProducts />;
       case "manageProfile":
-        return (
-          <div>
-            Manage Admin Profile (Insert/Update/Delete) (to be implemented)
-          </div>
-        );
+        return <ManageAdminProfile />;
       case "manageCustomerProfile":
-        return <div>Manage Customer Profiles (to be implemented)</div>;
+        return <ManageCustomerProfile />;
       case "manageSellerProfile":
-        return <div>Manage Seller Profiles (to be implemented)</div>;
+        return <ManageSellerProfile />;
       default:
         return null;
     }
@@ -51,13 +49,6 @@ const DashboardAdmin = () => {
             <span className="sidebar-label">View Product</span>
           </li>
           <li
-            className={activeTab === "manageProduct" ? "active" : ""}
-            onClick={() => setActiveTab("manageProduct")}
-          >
-            <FaEdit className="icon" />{" "}
-            <span className="sidebar-label">Manage Product</span>
-          </li>
-          <li
             className={activeTab === "manageCustomerProfile" ? "active" : ""}
             onClick={() => setActiveTab("manageCustomerProfile")}
           >
@@ -78,11 +69,12 @@ const DashboardAdmin = () => {
             <FaUserCog className="icon" />{" "}
             <span className="sidebar-label">Manage Profile</span>
           </li>
-        </ul>
-        <button className="logout-btn expanded" onClick={handleLogout}>
+          <button className="logout-btn expanded" onClick={handleLogout}>
           <FaSignOutAlt className="icon logout-icon" />{" "}
           <span className="sidebar-label">Logout</span>
         </button>
+        </ul>
+        
       </aside>
       <main className="main-content">{renderContent()}</main>
     </div>

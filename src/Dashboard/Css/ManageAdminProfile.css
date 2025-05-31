@@ -1,0 +1,130 @@
+/* Modern admin profile card styling */
+.admin-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  /* background: #f7f7fa; */
+}
+
+.admin-profile-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-profile-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.admin-profile-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.admin-profile-field label {
+  font-size: 0.98rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.admin-profile-field input {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f9f9fb;
+  transition: border 0.2s;
+}
+
+.admin-profile-field input:focus {
+  border: 1.5px solid #7c3aed;
+  outline: none;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 32px;
+  background: none;
+  border: none;
+  color: #7c3aed;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+.admin-update-btn {
+  margin-top: 0.7rem;
+  padding: 0.7rem 0;
+  background: linear-gradient(90deg, #7c3aed 60%, #a78bfa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-update-btn:hover {
+  background: linear-gradient(90deg, #5b21b6 60%, #7c3aed 100%);
+}
+
+.align-card-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.password-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  position: absolute;
+  right: 10px;
+  top: 38px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 28px;
+}
+
+.icon-btn img {
+  width: 22px;
+  height: 22px;
+  filter: grayscale(0.2) brightness(0.9);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.icon-btn:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .admin-profile-card {
+    width: 95vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .admin-profile-form {
+    gap: 0.7rem;
+  }
+}
