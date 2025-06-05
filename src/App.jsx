@@ -8,12 +8,12 @@ function App() {
 
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<SplashScreen />} />
-      </Routes> */}
-      {/* <DashboardBuyer /> */}
-      {/* <DashboardSeller /> */}
-      <DashboardAdmin />
+        <Route path='/DashboardBuyer' element={<DashboardBuyer />} />
+        <Route path='/DashboardSeller' element={<DashboardSeller />} />
+        <Route path='/DashboardAdmin' element={<DashboardAdmin />} />
+      </Routes>
     </>
   )
 }

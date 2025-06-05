@@ -43,17 +43,17 @@ const products = [
 const ViewAllProducts = () => {
   return (
     <div>
-      <div className="products-grid">
+      <div className="products-grid-admin">
         {products.map(product => (
-          <div className="product-card" key={product.id}>
+          <div className="product-card-admin" key={product.id}>
             <img src={product.imageUrl} alt={product.name} className="product-image" />
-            <div className="product-info">
+            <div className="product-info-admin">
               <h3>{product.name}</h3>
               <p className="brand">{product.brand}</p>
-              <div className="category-box">{product.category}</div>
-              <p className="seller">{product.brand}</p>
+              <div className="category-box-admin">{product.category}</div>
+              <p className="seller-admin">{product.brand}</p>
               <p className="price">${product.price.toFixed(2)}</p>
-              <button className="remove-btn">Remove</button>
+              <button className="remove-btn-admin">Remove</button>
             </div>
           </div>
         ))}
